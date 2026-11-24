@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SportMax — Sport anjomlari do'koni</title>
+  <meta name="description" content="SportMax — futbol, fitnes, boks, velosport va boshqa sport anjomlari onlayn do'koni. O'zbekiston bo'ylab yetkazib berish." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">SPORT<span>MAX</span></a>
+
+      <nav class="nav" id="nav">
+        <a href="#katalog">Katalog</a>
+        <a href="#kategoriyalar">Kategoriyalar</a>
+        <a href="#afzalliklar">Afzalliklar</a>
+        <a href="#aloqa">Aloqa</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="cart-btn" id="cartOpen" aria-label="Savatcha">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="burger" id="burger" aria-label="Menyu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__text">
+        <span class="hero__badge">Yangi mavsum — 30% gacha chegirma</span>
+        <h1>Natijangiz <span>anjomdan</span> boshlanadi</h1>
+        <p>Futbol, fitnes, boks, velosport va suzish uchun sifatli anjomlar. Toshkent bo'ylab 24 soatda, viloyatlarga 2–3 kunda yetkazib beramiz.</p>
+        <div class="hero__btns">
+          <a href="#katalog" class="btn btn--primary">Xarid qilish</a>
+          <a href="#kategoriyalar" class="btn btn--ghost">Kategoriyalar</a>
+        </div>
+        <div class="hero__stats">
+          <div><strong>500+</strong><span>mahsulot</span></div>
+          <div><strong>12 000+</strong><span>mijoz</span></div>
+          <div><strong>4.9★</strong><span>reyting</span></div>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <div class="hero__circle"></div>
+        <div class="hero__emoji">⚽</div>
+        <div class="hero__float hero__float--1">🏋️</div>
+        <div class="hero__float hero__float--2">🥊</div>
+        <div class="hero__float hero__float--3">🚴</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="section" id="kategoriyalar">
+    <div class="container">
+      <h2 class="section__title">Kategoriyalar</h2>
+      <div class="categories" id="categories"></div>
+    </div>
+  </section>
+
+  <!-- CATALOG -->
+  <section class="section section--alt" id="katalog">
+    <div class="container">
+      <div class="catalog__head">
+        <h2 class="section__title">Katalog</h2>
+        <div class="catalog__tools">
+          <input type="search" id="search" class="input" placeholder="Mahsulot qidirish..." />
+          <select id="sort" class="input">
+            <option value="default">Saralash</option>
+            <option value="price-asc">Arzonroq avval</option>
+            <option value="price-desc">Qimmatroq avval</option>
+            <option value="rating">Reyting bo'yicha</option>
+          </select>
+        </div>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="products" id="products"></div>
+      <p class="empty" id="empty" hidden>Hech narsa topilmadi 😕</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="afzalliklar">
+    <div class="container">
+      <h2 class="section__title">Nega aynan biz?</h2>
+      <div class="features">
+        <div class="feature"><div class="feature__icon">🚚</div><h3>Tez yetkazib berish</h3><p>Toshkent bo'ylab 24 soat ichida, 500 000 so'mdan ortiq xaridlarga bepul.</p></div>
+        <div class="feature"><div class="feature__icon">✅</div><h3>Original mahsulot</h3><p>Barcha anjomlar rasmiy yetkazib beruvchilardan, kafolat bilan.</p></div>
+        <div class="feature"><div class="feature__icon">🔄</div><h3>14 kun qaytarish</h3><p>Mos kelmasa — 14 kun ichida almashtiramiz yoki pulni qaytaramiz.</p></div>
+        <div class="feature"><div class="feature__icon">💳</div><h3>Qulay to'lov</h3><p>Naqd, Payme, Click, Uzcard va Humo orqali to'lash mumkin.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container newsletter__inner">
+      <div>
+        <h2>Chegirmalardan birinchi bo'lib xabardor bo'ling</h2>
+        <p>Yangi mahsulotlar va aksiyalar haqida xabar olish uchun obuna bo'ling.</p>
+      </div>
+      <form class="newsletter__form" id="newsletterForm">
+        <input type="email" class="input" placeholder="Email manzilingiz" required />
+        <button class="btn btn--dark" type="submit">Obuna bo'lish</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="aloqa">
+    <div class="container footer__grid">
+      <div>
+        <a href="#" class="logo">SPORT<span>MAX</span></a>
+        <p class="footer__about">Sport anjomlari onlayn do'koni. Sog'lom hayot tarzi uchun hamma narsa bir joyda.</p>
+      </div>
+      <div>
+        <h4>Bo'limlar</h4>
+        <a href="#katalog">Katalog</a>
+        <a href="#kategoriyalar">Kategoriyalar</a>
+        <a href="#afzalliklar">Afzalliklar</a>
+      </div>
+      <div>
+        <h4>Aloqa</h4>
+        <a href="tel:+998901234567">+998 90 123 45 67</a>
+        <a href="mailto:info@sportmax.uz">info@sportmax.uz</a>
+        <span>Toshkent sh., Chilonzor tumani</span>
+      </div>
+      <div>
+        <h4>Ish vaqti</h4>
+        <span>Du–Sha: 09:00 – 21:00</span>
+        <span>Yakshanba: 10:00 – 18:00</span>
+      </div>
+    </div>
+    <div class="container footer__bottom">© <span id="year"></span> SportMax. Barcha huquqlar himoyalangan.</div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart" id="cart" aria-label="Savatcha">
+    <div class="cart__head">
+      <h3>Savatcha</h3>
+      <button class="icon-btn" id="cartClose" aria-label="Yopish">✕</button>
+    </div>
+    <div class="cart__items" id="cartItems"></div>
+    <div class="cart__foot">
+      <div class="cart__total"><span>Jami:</span><strong id="cartTotal">0 so'm</strong></div>
+      <button class="btn btn--primary btn--full" id="checkoutBtn">Buyurtma berish</button>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true">
+    <div class="modal__box">
+      <button class="icon-btn modal__close" id="modalClose" aria-label="Yopish">✕</button>
+      <h3>Buyurtmani rasmiylashtirish</h3>
+      <form id="orderForm" class="order-form">
+        <label>Ism familiya<input class="input" name="name" required /></label>
+        <label>Telefon raqam<input class="input" name="phone" type="tel" placeholder="+998 __ ___ __ __" required /></label>
+        <label>Manzil<input class="input" name="address" required /></label>
+        <label>To'lov turi
+          <select class="input" name="payment">
+            <option>Naqd pul</option><option>Payme</option><option>Click</option><option>Uzcard / Humo</option>
+          </select>
+        </label>
+        <p class="order-form__total">To'lov summasi: <strong id="orderTotal"></strong></p>
+        <button class="btn btn--primary btn--full" type="submit">Tasdiqlash</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
